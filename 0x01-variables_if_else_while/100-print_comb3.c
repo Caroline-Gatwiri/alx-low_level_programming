@@ -1,27 +1,32 @@
-#include <stdio.h>
 
 /**
- * main - prints all possible different combinations of two digits
- * Return: ALways 0 (Success)
+ * main - start of the program
+ * Return: zero if successfully executed
  */
 int main(void)
 {
-	int n, m;
+	int num1, num2;
+	int combo1 = 1;
 
-	for (n = 48; n <= 56; n++)
+	for (num1 = 0; num1 <= 9; num1++)
 	{
-		for (m = 49; m <= 57; m++)
+		for (num2 = num1 + 1; num2 <= 9; num2++)
 		{
-			if (m > n)
+			if (num1 > num2)
 			{
-				putchar(n);
-				putchar(m);
-				if (n != 56 || m != 57)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				continue;
 			}
+			if (!combo1)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			else
+			{
+				combo1 = 0;
+			}
+			putchar(num1 + '0');
+			putchar(num2 + '0');
 		}
 	}
 	putchar('\n');
