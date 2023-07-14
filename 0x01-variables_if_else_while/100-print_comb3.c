@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 /**
  * main - start of the program
  * Return: zero if successfully executed
