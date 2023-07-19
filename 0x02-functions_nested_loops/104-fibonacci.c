@@ -1,26 +1,26 @@
 #include <stdio.h>
-
 /**
- * main - entry point
+ * main - start of the program
+ * Description: The program that finds and prints the first
+ *98 Fibonacci numbers, from 1 and 2 then new line
  *
- * Description: Prints the first 98 Fibonacci numbers.
- * Return: Always 0
+ * Return: o if successful
  */
 int main(void)
 {
-	unsigned long long int i, a1 = 1, a2 = 2, sum = 0;
+	long int i, a1 = 1, a2 = 2, sum = 0;
 
-	printf("%llu, %llu", a1, a2);
-
-	for (i = 3; i <= 98; i++)
+	for (i = 1; i <= 98; i++)
 	{
+		printf("%ld, ", a1);
 		sum = a1 + a2;
-		printf(", %llu", sum);
-
 		a1 = a2;
 		a2 = sum;
+		if (i == 97)
+		{
+			printf("%ld\n", a1);
+		}
 	}
-
-	printf("\n");
 	return (0);
 }
+
