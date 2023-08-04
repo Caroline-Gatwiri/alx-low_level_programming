@@ -1,0 +1,1 @@
+Making statis libraries
